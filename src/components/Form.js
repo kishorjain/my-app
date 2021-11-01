@@ -25,7 +25,7 @@ export default function Form(props) {
         </div>
         <div className="container my-3"style = {{color:props.mode === 'dark'?'light':'darks'}}>
             <h2>Your text summary</h2>
-            <p>{text.split(" ").length-1} Words entered {text.length} characters in text </p>
+            <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} Words entered {text.length} characters in text </p>
             <h3>Preview</h3>
             <p>{text.length>0?text:'Enter text in Text area to see preview'}</p>
         </div>
